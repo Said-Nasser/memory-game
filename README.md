@@ -1,0 +1,1 @@
+web application based on the classic memory game powered by vanilla JavaScript

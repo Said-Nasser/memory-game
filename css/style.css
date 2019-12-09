@@ -1,0 +1,128 @@
+/* box model fix */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Global
+========================= */
+
+body {
+    margin: 0;
+    font-family: Lato;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 60, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    transition: background-color 1s linear 1s;
+}
+
+/* ======================
+    Container
+========================= */
+
+/* Header
+========================= */
+
+header {
+    text-align: center;
+    color: #C4CBCA;
+    /* position: relative; */
+}
+
+button {
+    color: #C4CBCA;
+    font-size: 3rem;
+    background: rgba(196, 203, 202, 0.5);
+    border: none;
+    /* position: fixed; */
+    /* top: 10px;
+    left: 30px; */
+    outline: none;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+
+span.count-down {
+    color: #C4CBCA;
+    font-size: 3rem;
+    background: rgba(196, 203, 202, 0.5);
+    width: 80px;
+    border-radius: 10px;
+    /* position: fixed;
+    top: 200px;
+    left: 30px; */
+}
+
+button:hover {
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Cards
+========================= */
+
+.cards-container {
+    min-height: 70vh;
+}
+
+.cards {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.cards-row {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    /* width: 25%; */
+    margin: 5px;
+    border: none;
+    /* display: table; */
+    background-image: linear-gradient(rgba(136, 136, 136, 0.5), rgba(136, 136, 136, 0.5));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease-out;
+}
+
+.card, img {
+    border-radius: 10px;
+}
+
+img {
+    display: table-cell;
+}
+
+.card:hover img[src='images/question-mark.jpg'] {
+    cursor: pointer;
+}
+
+/* Animation
+========================= */
+
+.animation-alert {
+    animation: alert 0.5s ease-out 0s;
+}
+
+@keyframes alert {
+    0% {
+        background: rgb(255, 0, 0);
+    }
+    25% {
+        background: rgb(128, 0, 0);
+    }
+    50% {
+        background: rgb(212, 6, 6);
+    }
+    75% {
+        background: rgb(167, 28, 28);
+    }
+    100% {
+        background: rgb(218, 10, 10);
+    }
+}
